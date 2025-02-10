@@ -1,16 +1,11 @@
-const buttonCnt = 3;
-let winnerId = WinnerButton(buttonCnt)
+const buttonCount = 3;
+winnerId =  Math.ceil(Math.random() * buttonCount);
 const output = document.querySelector('#randomText');
 
-function WinnerButton(buttonCnt) {
-    let Winner = Math.ceil(Math.random() * buttonCnt);
-    return Winner;
-}
-
-function handleClick(clicked_id) {
-    if (Number(clicked_id) === winnerId) {
-         output.textContent += "Congratulations! " + " ";
+function handleClick(clickedId) {
+    if (Number(clickedId) === winnerId) {
+         output.textContent += "Congratulations! ";
     } else {
-        output.textContent += "  Keep trying!" + "  ";
+        output.textContent += "  Keep trying!";
     }   
 }
